@@ -1,0 +1,28 @@
+@import "../../partials/colors";
+@import "../../partials/fonts";
+
+.indicator-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 33px;
+  border: 2px solid white;
+  border-radius: 50%;
+  font-weight: 500;
+  color: white;
+}
+
+.indicator.active {
+  background-color: $light-blue;
+  color: black;
+  border: none;
+}

@@ -1,16 +1,13 @@
 import "./Form.scss";
 import sidebarImageMobile from "../../assets/images/bg-sidebar-mobile.svg";
 import NextStep from "../NextStep/NextStep";
+import StepIndicator from "../StepIndicator/StepIndicator";
 
 function Form() {
   return (
     <div className="form-component">
       <div className="sidebar">
-        <img
-          src={sidebarImageMobile}
-          alt="backround image"
-          className="bg-image-mobile"
-        />
+        <StepIndicator />
       </div>
       <main className="form-body"></main>
       <NextStep />
