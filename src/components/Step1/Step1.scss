@@ -1,0 +1,46 @@
+@import "../../partials/colors";
+@import "../../partials/fonts";
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $pastel-blue;
+}
+
+.step-description {
+  margin: 0.5rem 0 1rem 0;
+  line-height: 1.25rem;
+  overflow-wrap: break-word;
+  max-width: 80%;
+  font-weight: 500;
+  color: lightgray;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 14px;
+    margin-bottom: 1rem;
+    color: $pastel-blue;
+  }
+  input {
+    margin-top: 4px;
+    padding: 0 0.75rem;
+    height: 40px;
+    width: 100%;
+    border: 1px solid $light-gray;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    font-size: 16px;
+    outline-color: $purplish-blue;
+    &::placeholder {
+      color: $cool-gray;
+      font-size: 14px;
+    }
+  }
+}
+
+.invalid {
+  border-color: $strawberry-red;
+}
