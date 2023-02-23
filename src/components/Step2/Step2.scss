@@ -32,10 +32,11 @@
   font-size: 1.15rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
+  color: $marine-blue;
 }
 
 .plan-text-wrapper > :last-child {
-  color: rgb(161, 161, 161);
+  color: $cool-gray;
 }
 
 .duration {
