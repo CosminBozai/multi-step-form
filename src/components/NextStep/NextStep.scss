@@ -28,6 +28,10 @@
   }
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 @media (min-width: 1024px) {
   .next-step-container {
     right: 100px;
