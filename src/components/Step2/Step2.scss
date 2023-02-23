@@ -8,6 +8,7 @@
   border: 1px solid $light-gray;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .plan.selected {
@@ -109,4 +110,19 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media (min-width: 1024px) {
+  .plans-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .plan {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    width: 140px;
+    height: 160px;
+  }
 }

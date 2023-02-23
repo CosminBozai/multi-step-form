@@ -22,6 +22,9 @@
     background-color: white;
     color: $cool-gray;
   }
+  button:first-child:hover {
+    color: $marine-blue;
+  }
   button:nth-child(2) {
     background-color: $marine-blue;
     color: white;
