@@ -10,6 +10,8 @@
 .step-description {
   margin: 0.75rem 0 2.75rem 0;
   line-height: 1.25rem;
+  word-wrap: break-word;
+  max-width: 90%;
   font-weight: 500;
   color: $cool-gray;
 }
@@ -41,4 +43,10 @@ form {
 
 .invalid {
   border-color: $strawberry-red;
+}
+
+@media (min-width: 1024px) {
+  .step-description {
+    max-width: 100%;
+  }
 }
