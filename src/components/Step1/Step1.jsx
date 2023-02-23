@@ -19,9 +19,9 @@ function Step1() {
           <input type="email" name="email" className="invalid" />
         </label>
         <label htmlFor="phone">
-          Name
+          Phone Number
           <br />
-          <input type="number" name="phone" />
+          <input type="text" name="phone" />
         </label>
       </form>
     </>
