@@ -14,7 +14,10 @@ function Form() {
 
   return (
     <div className="form-component">
-      <div className="sidebar">
+      <div className="sidebar-small">
+        <StepIndicator />
+      </div>
+      <div className="sidebar-large">
         <StepIndicator />
       </div>
       <main className="form-body">

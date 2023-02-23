@@ -1,12 +1,41 @@
 @import "../../partials/colors";
 @import "../../partials/fonts";
 
-.indicator-wrapper {
+.indicator-component-small {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 300px;
   margin: 0 auto;
+}
+
+.indicator-component-large {
+  display: none;
+  flex-direction: column;
+  padding: 2.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.indicator-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.text-wrapper {
+  margin-left: 0.75rem;
+  p:first-child {
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: hsl(228, 100%, 84%);
+  }
+  p:nth-child(2) {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+  }
 }
 
 .indicator {
@@ -25,4 +54,13 @@
   background-color: $light-blue;
   color: black;
   border: none;
+}
+
+@media (min-width: 1024px) {
+  .indicator-component-small {
+    display: none;
+  }
+  .indicator-component-large {
+    display: flex;
+  }
 }

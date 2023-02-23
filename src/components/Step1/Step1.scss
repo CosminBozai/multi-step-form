@@ -2,18 +2,16 @@
 @import "../../partials/fonts";
 
 .step-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: $pastel-blue;
 }
 
 .step-description {
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.75rem 0 2.75rem 0;
   line-height: 1.25rem;
-  overflow-wrap: break-word;
-  max-width: 80%;
   font-weight: 500;
-  color: lightgray;
+  color: $cool-gray;
 }
 
 form {
@@ -31,7 +29,7 @@ form {
     width: 100%;
     border: 1px solid $light-gray;
     border-radius: 0.25rem;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     outline-color: $purplish-blue;
     &::placeholder {

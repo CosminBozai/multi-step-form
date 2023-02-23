@@ -27,3 +27,11 @@
     color: white;
   }
 }
+
+@media (min-width: 1024px) {
+  .next-step-container {
+    right: 100px;
+    bottom: 1rem;
+    width: 50%;
+  }
+}
