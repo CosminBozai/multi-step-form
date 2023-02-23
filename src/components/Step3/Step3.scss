@@ -1,0 +1,60 @@
+@import "../../partials/colors";
+@import "../../partials/fonts";
+
+.add-on {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid $light-gray;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  .right-side {
+    display: flex;
+    align-items: center;
+    input {
+      margin-right: 0.75rem;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $light-gray;
+      cursor: pointer;
+    }
+  }
+}
+
+.add-on.selected {
+  border-color: $purplish-blue;
+  background-color: $light-blue-bg;
+}
+
+.add-on:hover {
+  border-color: $purplish-blue;
+}
+
+.add-on-text-wrapper > :first-child {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: $marine-blue;
+}
+
+.add-on-text-wrapper > :last-child {
+  font-size: 0.9rem;
+  color: $cool-gray;
+}
+
+.price {
+  font-size: 14px;
+  color: $purplish-blue;
+}
+
+@media (min-width: 1024px) {
+  .add-on {
+    padding: 1.5rem 1rem;
+  }
+  .right-side {
+    input {
+      margin-right: 1rem !important;
+    }
+  }
+}
