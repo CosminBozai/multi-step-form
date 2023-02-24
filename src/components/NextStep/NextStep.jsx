@@ -1,6 +1,7 @@
 import "./NextStep.scss";
 
 function NextStep({ currentStep, handleSubmit, handleGoBack }) {
+  const buttonText = currentStep === 3 ? "Confirm" : "Next Step";
   return (
     <div className="next-step-container">
       <button
@@ -9,7 +10,12 @@ function NextStep({ currentStep, handleSubmit, handleGoBack }) {
       >
         Go back
       </button>
-      <button onClick={handleSubmit}>Next Step</button>
+      <button
+        className={`${currentStep === 3 ? "confirm" : ""}`}
+        onClick={handleSubmit}
+      >
+        {buttonText}
+      </button>
     </div>
   );
 }
