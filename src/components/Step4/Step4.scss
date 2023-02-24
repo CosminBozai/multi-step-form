@@ -1,0 +1,58 @@
+@import "../../partials/colors";
+@import "../../partials/fonts";
+
+.summary-container {
+}
+
+.plan-summary,
+.summary,
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.plan-summary,
+.summary {
+  padding: 1rem;
+  background-color: lighten($light-blue-bg, 4%);
+}
+
+.total {
+  padding: 0 1rem;
+  margin-top: 1.5rem;
+}
+
+.plan-summary {
+  .summary-title {
+    color: $marine-blue;
+    font-weight: 600;
+  }
+  .summary-price {
+    color: $marine-blue;
+    font-weight: 600;
+  }
+}
+
+.summary {
+  .summary-title {
+    font-weight: 500;
+    color: $cool-gray;
+  }
+  .summary-price {
+    color: $marine-blue;
+    font-weight: 500;
+  }
+}
+
+.total {
+  .total-text {
+    font-weight: 500;
+    color: $cool-gray;
+  }
+  .total-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $purplish-blue;
+  }
+}
