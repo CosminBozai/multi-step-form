@@ -10,9 +10,9 @@ function Step1({ previousData, stepData, setStepData, setDisabled }) {
   });
   const [inputVisited, setInputVisited] = useState({});
   const [stepFormData, setStepFormData] = useState({
-    username: previousData.username || "",
-    email: previousData.email || "",
-    phone: previousData.phone || "",
+    username: "",
+    email: "",
+    phone: "",
   });
 
   const handleInputChange = (e) => {
@@ -22,7 +22,6 @@ function Step1({ previousData, stepData, setStepData, setDisabled }) {
   };
 
   useEffect(() => {
-    console.log(previousData);
     setErrors(
       checkForm(stepFormData.username, stepFormData.email, stepFormData.phone)
     );
@@ -34,7 +33,7 @@ function Step1({ previousData, stepData, setStepData, setDisabled }) {
       setDisabled(true);
     } else {
       setDisabled(false);
-      setStepData({ ...stepData, ...stepFormData });
+      setStepData(stepFormData);
     }
   }, [errors]);
 
@@ -54,7 +53,6 @@ function Step1({ previousData, stepData, setStepData, setDisabled }) {
           )}
           <br />
           <input
-            value={stepFormData.username}
             type="text"
             name="username"
             placeholder="e.g. Bozai Cosmin"
@@ -74,7 +72,6 @@ function Step1({ previousData, stepData, setStepData, setDisabled }) {
           )}
           <br />
           <input
-            value={stepFormData.email}
             type="email"
             name="email"
             placeholder="e.g. cosminbozai@gmail.com"
@@ -94,7 +91,6 @@ function Step1({ previousData, stepData, setStepData, setDisabled }) {
           )}
           <br />
           <input
-            value={stepFormData.phone}
             type="tel"
             name="phone"
             placeholder="Write any number"

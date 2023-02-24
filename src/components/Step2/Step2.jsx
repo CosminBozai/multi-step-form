@@ -1,19 +1,24 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ReactComponent as AdvancedIcon } from "../../assets/images/icon-advanced.svg";
 import { ReactComponent as ArcadeIcon } from "../../assets/images/icon-arcade.svg";
 import { ReactComponent as ProIcon } from "../../assets/images/icon-pro.svg";
 import "./Step2.scss";
 
-function Step2() {
+function Step2({ stepData, setStepData }) {
   const slider = useRef(null);
   const [selectedPlan, setSelectedPlan] = useState(1);
   const [selectedDuration, setSelectedDuration] = useState("monthly");
 
-  const selectDuration = () => {
+  const changeDuration = () => {
     let duration;
     slider.current.checked ? (duration = "yearly") : (duration = "monthly");
     setSelectedDuration(duration);
   };
+
+  useEffect(() => {
+    const planData = { selectedPlan, selectedDuration };
+    setStepData(planData);
+  }, [selectedPlan, selectedDuration]);
   return (
     <>
       <h1 className="step-title">Select Your plan</h1>
@@ -57,7 +62,7 @@ function Step2() {
           Monthly
         </span>
         <label className="switch">
-          <input type="checkbox" onChange={selectDuration} ref={slider} />
+          <input type="checkbox" onChange={changeDuration} ref={slider} />
           <span className="slider round"></span>
         </label>
         <span className={`${selectedDuration === "yearly" ? "selected" : ""}`}>

@@ -10,24 +10,27 @@ import Step4 from "../Step4/Step4";
 const steps = [Step1, Step2, Step3, Step4];
 
 function Form() {
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState([]);
   const [stepData, setStepData] = useState({});
   const [currentStep, setCurrentStep] = useState(0);
   const [disabled, setDisabled] = useState(false);
 
   const handleNextStep = () => {
-    setDisabled(true);
-    setFormData({ ...formData, ...stepData });
     setCurrentStep((currentStep) => currentStep + 1);
+    setDisabled(true);
+    setFormData([...formData, stepData]);
+    setStepData({});
     setDisabled(false);
   };
 
   const handleGoBack = () => {
     if (currentStep !== 0) setCurrentStep((currentStep) => currentStep - 1);
+    const updatedForm = formData.slice(0, -1);
+    setFormData(updatedForm);
   };
 
   useEffect(() => {
-    console.log("🚀 ~ file: Form.jsx:31 ~ useEffect ~ formData:", formData);
+    console.log("🚀 ~ file: Form.jsx:34 ~ useEffect ~ formData:", formData);
   }, [formData]);
 
   const StepComponent = steps[currentStep];
@@ -42,7 +45,7 @@ function Form() {
       </div>
       <main className="form-body">
         <StepComponent
-          previousData={formData}
+          formData={formData}
           stepData={stepData}
           setStepData={setStepData}
           setDisabled={setDisabled}
