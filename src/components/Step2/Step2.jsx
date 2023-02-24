@@ -4,7 +4,7 @@ import { ReactComponent as ArcadeIcon } from "../../assets/images/icon-arcade.sv
 import { ReactComponent as ProIcon } from "../../assets/images/icon-pro.svg";
 import "./Step2.scss";
 
-function Step2({ stepData, setStepData }) {
+function Step2({ setStepData }) {
   const slider = useRef(null);
   const [selectedPlan, setSelectedPlan] = useState(1);
   const [selectedDuration, setSelectedDuration] = useState("monthly");
