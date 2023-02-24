@@ -1,6 +1,6 @@
-import "./NextStep.scss";
+import "./Navigation.scss";
 
-function NextStep({ currentStep, handleSubmit, handleGoBack }) {
+function Navigation({ currentStep, handleNextStep, handleGoBack, disabled }) {
   const buttonText = currentStep === 3 ? "Confirm" : "Next Step";
   return (
     <div className="next-step-container">
@@ -12,7 +12,8 @@ function NextStep({ currentStep, handleSubmit, handleGoBack }) {
       </button>
       <button
         className={`${currentStep === 3 ? "confirm" : ""}`}
-        onClick={handleSubmit}
+        onClick={handleNextStep}
+        disabled={disabled}
       >
         {buttonText}
       </button>
@@ -20,4 +21,4 @@ function NextStep({ currentStep, handleSubmit, handleGoBack }) {
   );
 }
 
-export default NextStep;
+export default Navigation;

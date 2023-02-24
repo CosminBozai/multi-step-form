@@ -45,8 +45,18 @@ form {
   border-color: $strawberry-red;
 }
 
+.error {
+  position: absolute;
+  right: 30px;
+  color: $strawberry-red;
+  text-align: end;
+}
+
 @media (min-width: 1024px) {
   .step-description {
     max-width: 100%;
+  }
+  .error {
+    right: 4px;
   }
 }

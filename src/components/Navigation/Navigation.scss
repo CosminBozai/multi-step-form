@@ -29,6 +29,10 @@
     background-color: $marine-blue;
     color: white;
   }
+  button:nth-child(2):disabled {
+    background-color: $cool-gray;
+    cursor: not-allowed;
+  }
   .confirm {
     background-color: $purplish-blue !important;
   }
