@@ -4,22 +4,22 @@ function StepIndicator({ currentStep }) {
   return (
     <>
       <div className="indicator-component-small">
-        <div className={`indicator ${currentStep === 0 ? "active" : ""}`}>
+        <div className={`indicator ${currentStep === 1 ? "active" : ""}`}>
           1
         </div>
-        <div className={`indicator ${currentStep === 1 ? "active" : ""}`}>
+        <div className={`indicator ${currentStep === 2 ? "active" : ""}`}>
           2
         </div>
-        <div className={`indicator ${currentStep === 2 ? "active" : ""}`}>
+        <div className={`indicator ${currentStep === 3 ? "active" : ""}`}>
           3
         </div>
-        <div className={`indicator ${currentStep === 3 ? "active" : ""}`}>
+        <div className={`indicator ${currentStep === 4 ? "active" : ""}`}>
           4
         </div>
       </div>
       <div className="indicator-component-large">
         <div className="indicator-wrapper">
-          <div className={`indicator ${currentStep === 0 ? "active" : ""}`}>
+          <div className={`indicator ${currentStep === 1 ? "active" : ""}`}>
             1
           </div>
           <div className="text-wrapper">
@@ -28,7 +28,7 @@ function StepIndicator({ currentStep }) {
           </div>
         </div>
         <div className="indicator-wrapper">
-          <div className={`indicator ${currentStep === 1 ? "active" : ""}`}>
+          <div className={`indicator ${currentStep === 2 ? "active" : ""}`}>
             2
           </div>
           <div className="text-wrapper">
@@ -37,7 +37,7 @@ function StepIndicator({ currentStep }) {
           </div>
         </div>
         <div className="indicator-wrapper">
-          <div className={`indicator ${currentStep === 2 ? "active" : ""}`}>
+          <div className={`indicator ${currentStep === 3 ? "active" : ""}`}>
             3
           </div>
           <div className="text-wrapper">
@@ -46,7 +46,7 @@ function StepIndicator({ currentStep }) {
           </div>
         </div>
         <div className="indicator-wrapper">
-          <div className={`indicator ${currentStep === 3 ? "active" : ""}`}>
+          <div className={`indicator ${currentStep === 4 ? "active" : ""}`}>
             4
           </div>
           <div className="text-wrapper">
