@@ -2,14 +2,18 @@ import { useEffect, useState } from "react";
 import checkForm from "../../utils/checkForm";
 import "./Step1.scss";
 
-function Step1({ previousData, stepData, setStepData, setDisabled }) {
+function Step1({ formData, setFormData, setDisabled }) {
   const [errors, setErrors] = useState({
     usernameErr: false,
     emailErr: false,
     phoneErr: false,
   });
-  const [inputVisited, setInputVisited] = useState({});
-  const [stepFormData, setStepFormData] = useState({
+  const [inputVisited, setInputVisited] = useState({
+    username: false,
+    email: false,
+    phone: false,
+  });
+  const [userData, setUserData] = useState({
     username: "",
     email: "",
     phone: "",
@@ -17,15 +21,13 @@ function Step1({ previousData, stepData, setStepData, setDisabled }) {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setStepFormData({ ...stepFormData, [name]: value });
+    setUserData({ ...userData, [name]: value });
     setInputVisited({ ...inputVisited, [name]: true });
   };
 
   useEffect(() => {
-    setErrors(
-      checkForm(stepFormData.username, stepFormData.email, stepFormData.phone)
-    );
-  }, [stepFormData]);
+    setErrors(checkForm(userData.username, userData.email, userData.phone));
+  }, [userData]);
 
   useEffect(() => {
     setDisabled(true);
@@ -33,7 +35,7 @@ function Step1({ previousData, stepData, setStepData, setDisabled }) {
       setDisabled(true);
     } else {
       setDisabled(false);
-      setStepData(stepFormData);
+      setFormData({ ...formData, userData });
     }
   }, [errors]);
 

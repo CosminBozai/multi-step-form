@@ -11,22 +11,15 @@ const steps = [Step1, Step2, Step3, Step4];
 
 function Form() {
   const [formData, setFormData] = useState([]);
-  const [stepData, setStepData] = useState({});
   const [currentStep, setCurrentStep] = useState(0);
   const [disabled, setDisabled] = useState(false);
 
   const handleNextStep = () => {
     setCurrentStep((currentStep) => currentStep + 1);
-    setDisabled(true);
-    setFormData([...formData, stepData]);
-    setStepData({});
-    setDisabled(false);
   };
 
   const handleGoBack = () => {
     if (currentStep !== 0) setCurrentStep((currentStep) => currentStep - 1);
-    const updatedForm = formData.slice(0, -1);
-    setFormData(updatedForm);
   };
 
   useEffect(() => {
@@ -46,8 +39,7 @@ function Form() {
       <main className="form-body">
         <StepComponent
           formData={formData}
-          stepData={stepData}
-          setStepData={setStepData}
+          setFormData={setFormData}
           setDisabled={setDisabled}
         />
       </main>
