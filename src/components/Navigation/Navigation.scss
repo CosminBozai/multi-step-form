@@ -18,27 +18,33 @@
     font-family: $main-font;
     cursor: pointer;
   }
-  button:first-child {
+  .go-back {
     background-color: white;
     color: $cool-gray;
   }
-  button:first-child:hover {
+  .go-back:hover {
     color: $marine-blue;
   }
-  button:nth-child(2) {
+  .next {
     background-color: $marine-blue;
     color: white;
   }
-  button:nth-child(2):disabled {
+  .next:disabled {
     background-color: $cool-gray;
     cursor: not-allowed;
   }
+
   .confirm {
-    background-color: $purplish-blue !important;
+    background-color: $purplish-blue;
+    color: white;
   }
   .confirm:hover {
-    background-color: lighten($purplish-blue, 10%) !important;
+    background-color: lighten($purplish-blue, 10%);
   }
+}
+
+.display-none {
+  display: none;
 }
 
 .invisible {

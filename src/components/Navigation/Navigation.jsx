@@ -1,21 +1,32 @@
 import "./Navigation.scss";
 
-function Navigation({ currentStep, handleNextStep, handleGoBack, disabled }) {
-  const buttonText = currentStep === 3 ? "Confirm" : "Next Step";
+function Navigation({
+  currentStep,
+  handleNextStep,
+  handleGoBack,
+  handleConfirm,
+  disabled,
+}) {
   return (
     <div className="next-step-container">
       <button
         onClick={handleGoBack}
-        className={`go-back ${currentStep === 0 ? "invisible" : ""}`}
+        className={`go-back ${currentStep === 1 ? "invisible" : ""}`}
       >
         Go back
       </button>
       <button
-        className={`${currentStep === 3 ? "confirm" : ""}`}
+        className={`next ${currentStep === 4 ? "display-none" : ""}`}
         onClick={handleNextStep}
         disabled={disabled}
       >
-        {buttonText}
+        Next Step
+      </button>
+      <button
+        className={`confirm ${currentStep === 4 ? "" : "display-none"}`}
+        onClick={handleConfirm}
+      >
+        Confirm
       </button>
     </div>
   );
