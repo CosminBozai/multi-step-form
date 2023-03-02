@@ -8,7 +8,11 @@ function Navigation({
   disabled,
 }) {
   return (
-    <div className="next-step-container">
+    <div
+      className={`next-step-container ${
+        currentStep === 5 ? "display-none" : ""
+      }`}
+    >
       <button
         onClick={handleGoBack}
         className={`go-back ${currentStep === 1 ? "invisible" : ""}`}
